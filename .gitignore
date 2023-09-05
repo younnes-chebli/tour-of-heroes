@@ -1,42 +1,78 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-
-# Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
-
-# Node
-/node_modules
+# Node.js related files
+node_modules/
 npm-debug.log
 yarn-error.log
 
-# IDEs and editors
-.idea/
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
+# Angular specific files and directories
+/dist/
+/dist-server/
+/tmp/
+/e2e/*.js
+/e2e/*.map
+/src/*.js
+/src/*.js.map
+/src/*.d.ts
 
-# Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
+# Compiled output of the Angular CLI
+/dist/
+/dist-server/
 
-# Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
+# Angular service worker
+/ngsw.json
 
-# System files
+# SystemJS build cache
+/systemjs.config.extras.js
+
+# Coverage directory for test results
+/coverage/
+
+# End-to-end test reports
+/e2e/reports/
+
+# Environment-specific config files
+/src/environments/*.js
+/src/environments/*.js.map
+
+# Compiled Sass output
+/src/**/*.css
+/src/**/*.css.map
+
+# Compiled TypeScript output
+/src/**/*.js
+/src/**/*.js.map
+
+# Angular CLI configuration files
+.angular-cli.json
+.angular-cli.json.*
+.angular-cli/
+.angular/
+
+# Lock files
+package-lock.json
+yarn.lock
+
+# IDE-specific files
+/.idea/
+.vscode/
+
+# Mac OS files
 .DS_Store
-Thumbs.db
+
+# Editor config files
+.editorconfig
+
+# Testing config files
+/karma.conf.js
+/protractor.conf.js
+
+# TypeScript configuration file
+/tsconfig.json
+
+# TypeScript file for type checking
+/tsconfig.tsbuildinfo
+
+# Angular language service
+/ngLS/
+
+# Jest coverage directory
+/coverage/
