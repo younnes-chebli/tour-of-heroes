@@ -17,10 +17,14 @@ export class HeroDetailComponent {
     private route: ActivatedRoute,
     private location: Location,
     private heroService: HeroService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.getHero();
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
   getHero(): void {
@@ -29,7 +33,10 @@ export class HeroDetailComponent {
       .subscribe(hero => this.hero = hero);
   }
 
-  goBack(): void {
-    this.location.back();
+  save(): void {
+    if (this.hero) {
+      this.heroService.updateHero(this.hero)
+        .subscribe(() => this.goBack());
+    }
   }
 }
